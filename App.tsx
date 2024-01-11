@@ -13,47 +13,25 @@ import PostView from './instagramclone/PostView';
 
 function App(): React.JSX.Element {
   const imageData = [
-    require('./assets/images/image1.jpg'),
-    require('./assets/images/image2.jpg'),
-    require('./assets/images/image3.jpg'),
-    require('./assets/images/image4.jpg'),
-    require('./assets/images/image1.jpg'),
-    require('./assets/images/image2.jpg'),
-    require('./assets/images/image3.jpg'),
-    require('./assets/images/image4.jpg'),
-    // Add more image sources as needed
+    {image: require('./assets/images/image5.jpg'), text: 'itss_sonalii'},
+    {image: require('./assets/images/image6.jpg'), text: 'rohit30619...'},
+    {image: require('./assets/images/image7.jpg'), text: 'android'},
+    {image: require('./assets/images/image8.jpg'), text: 'marvelstud...'},
+    {image: require('./assets/images/image9.jpg'), text: 'google'},
+    {image: require('./assets/images/image10.jpg'), text: '_off_track___'},
+    // Add more image sources and text as needed
   ];
 
   const postData = [
     {
-      username: 'ipsum',
-      userAvatar: require('./assets/images/image2.jpg'),
-      userPostImage: require('./assets/post/image01.jpeg'),
+      username: 'lovethenature95',
+      userAvatar: require('./assets/images/lovethenature95.jpg'),
+      userPostImage: require('./assets/post/post01.jpg'),
     },
     {
-      username: 'ipsumview',
-      userAvatar: require('./assets/images/image2.jpg'),
-      userPostImage: require('./assets/post/image01.jpeg'),
-    },
-    {
-      username: 'loremipsum',
-      userAvatar: require('./assets/images/image2.jpg'),
-      userPostImage: require('./assets/post/image01.jpeg'),
-    },
-    {
-      username: 'ipsumworld',
-      userAvatar: require('./assets/images/image2.jpg'),
-      userPostImage: require('./assets/post/image01.jpeg'),
-    },
-    {
-      username: 'helloworld',
-      userAvatar: require('./assets/images/image2.jpg'),
-      userPostImage: require('./assets/post/image01.jpeg'),
-    },
-    {
-      username: 'hello',
-      userAvatar: require('./assets/images/image2.jpg'),
-      userPostImage: require('./assets/post/image01.jpeg'),
+      username: 'nature_beauty511',
+      userAvatar: require('./assets/images/nature_beauty511.jpg'),
+      userPostImage: require('./assets/post/post02.jpg'),
     },
   ];
 

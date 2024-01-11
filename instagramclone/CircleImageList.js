@@ -1,17 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Image, FlatList, StyleSheet} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import {View, Image, FlatList, Text, StyleSheet} from 'react-native';
 
 const CircleImageList = ({data}) => {
   const renderCircleImage = ({item}) => (
-    <View style={styles.circleImageContainer}>
-        <Image source={item} style={styles.circleImage} />
+    <View style={styles.container}>
+        <View style={styles.circleImageContainer}>
+          <Image source={item.image} style={styles.circleImage} />
+        </View>
+        <Text style={styles.imageText}>{item.text}</Text>
     </View>
   );
 
   return (
-    <View style={styles.container}>
+    <View >
       <FlatList
         data={data}
         renderItem={renderCircleImage}
@@ -34,6 +36,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     borderColor: '#AA336A',
     borderWidth: 4,
+    alignItems: 'center',
   },
   circleImage: {
     width: '100%',
@@ -48,6 +51,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  imageText: {
+    width: 65,
+    fontSize: 10,
+    marginTop: 5,
+    marginStart: 6,
+    textAlign: 'center',
+    color: 'black', // You can set the desired color for the text
   },
 });
 
