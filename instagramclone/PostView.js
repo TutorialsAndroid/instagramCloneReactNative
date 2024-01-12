@@ -15,10 +15,21 @@ const PostView = ({ post }) => {
 
                 {/* Follow and Menu button */}
                 <View style={styles.postUserInfoView1}>
+                    {/* Follow button */}
                     <TouchableOpacity
                         style={styles.buttonContainer}
                         onPress={() => console.log('Follow button pressed...')}>
                         <Text style={styles.buttonText}>Follow</Text>
+                    </TouchableOpacity>
+
+                    {/* Menu button */}
+                    <TouchableOpacity
+                        // style={styles.buttonContainer}
+                        onPress={() => console.log('Follow button pressed...')}>
+                        <Image
+                            source={require('./images/ic_more.png')}
+                            style={{width: 24, height: 30}}
+                        />
                     </TouchableOpacity>
                 </View>
             </View>
@@ -69,7 +80,7 @@ const styles = StyleSheet.create({
         height: 200,
     },
     userName: {
-        color: 'black',
+        color: '#373737',
         fontSize: 16,
         fontWeight: 'bold',
     },
@@ -102,7 +113,7 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
     },
     buttonContainer: {
-        backgroundColor: 'gray',
+        backgroundColor: '#EFEFEF',
         padding: 4,
         width: 60,
         borderRadius: 5,
@@ -112,8 +123,12 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     postUserInfoView1: {
+        flexDirection: 'row',
         marginEnd: 10,
         marginLeft: 'auto',
+    },
+    moreButton: {
+
     },
 });
 
