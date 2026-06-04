@@ -1,21 +1,34 @@
 <div align="center">
 
-# ✨ Instagram Clone — Premium React Native Feed UI
+# ✨ Instagram Clone — Premium Material React Native Feed UI
 
-A polished, modern, and production-style **Instagram-inspired social feed UI** built with **React Native**.
-Designed with clean components, beautiful cards, story rings, interactive post actions, verified badges, and professional mobile-first spacing.
-
-<br />
-
-<img src="screenshots/home-feed-preview.png" alt="Instagram Clone React Native Feed Screenshot" width="360" />
+A modern, polished, and production-style **Instagram-inspired creator feed UI** built with **React Native**.  
+Designed with a premium material aesthetic, cinematic post cards, story rings, creator filters, interactive actions, safe-area support, and performance-focused feed rendering.
 
 <br />
+
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="screenshots/Screenshot_1780578382.png" width="110%" alt="Instagram Clone React Native"/>
+      </td>
+      <td align="center">
+        <img src="screenshots/Screenshot_1780578388.png" width="110%" alt="Instagram Clone React Native"/>
+      </td>
+    </tr>
+   
+  </table>
+</p>
+
+<br />
 <br />
 
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge\&logo=react\&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript\&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)
-![Ionicons](https://img.shields.io/badge/Ionicons-3880FF?style=for-the-badge\&logo=ionic\&logoColor=white)
+![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Ionicons](https://img.shields.io/badge/Ionicons-3880FF?style=for-the-badge&logo=ionic&logoColor=white)
+![Material UI](https://img.shields.io/badge/Premium%20Material%20UI-111827?style=for-the-badge&logo=materialdesign&logoColor=white)
 
 </div>
 
@@ -23,110 +36,223 @@ Designed with clean components, beautiful cards, story rings, interactive post a
 
 ## 📌 Overview
 
-This project is a professionally upgraded **Instagram-style mobile feed interface** created using **React Native**.
-It focuses on a clean UI, reusable components, smooth mobile layout, optimized feed rendering, and production-ready code structure.
+**Instagram Clone — Premium Material Feed UI** is a beautifully redesigned React Native social feed interface.  
+It upgrades a basic Instagram-style clone into a more professional, app-store-ready mobile UI with a unique creator-feed concept.
 
-The UI includes:
+The project focuses on:
 
-* Beautiful top toolbar with notification and message badges
-* Horizontal story section with live, seen, and add-story states
-* Premium card-style post layout
-* Like, comment, share, save, follow, and menu actions
-* Verified user badge
-* Location, caption, likes, comments, and timestamp support
-* Vector icons using Ionicons
-* Optimized rendering using `FlatList`, `memo`, `useCallback`, and `useMemo`
+- Premium material-style layout
+- Clean component architecture
+- Smooth feed performance
+- Interactive post actions
+- Modern safe-area handling
+- Beautiful creator discovery experience
+- Scalable data-driven UI structure
 
----
-
-## ✨ Features
-
-### 🎨 Premium UI Design
-
-The layout is designed to feel modern and app-store ready:
-
-* Soft background surface
-* Rounded post cards
-* Clean shadows and elevation
-* Professional spacing
-* Balanced typography
-* Instagram-inspired accent colors
-* Mobile-first visual hierarchy
+> This project uses `react-native-safe-area-context` instead of the deprecated React Native core `SafeAreaView`.
 
 ---
 
-### 🟣 Story Section
+## 🖼️ Preview
 
-The story row supports multiple story states:
-
-| Feature           | Description                             |
-| ----------------- | --------------------------------------- |
-| Add Story         | Shows a plus badge for the current user |
-| Live Story        | Shows a live badge                      |
-| Seen Story        | Uses muted ring styling                 |
-| Horizontal Scroll | Smooth story browsing                   |
-| Optimized List    | Uses `FlatList` with `getItemLayout`    |
-
----
-
-### 🖼️ Feed Post Card
-
-Each post card includes:
-
-* User avatar
-* Username
-* Verified badge
-* Location text
-* Follow / Following state
-* More menu icon
-* Large responsive post image
-* Like, comment, share, and save actions
-* Likes count formatting
-* Caption
-* Comments preview
-* Time label
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="screenshots/Screenshot_1780578382.png" width="110%" alt="Instagram Clone React Native"/>
+      </td>
+      <td align="center">
+        <img src="screenshots/Screenshot_1780578388.png" width="110%" alt="Instagram Clone React Native"/>
+      </td>
+    </tr>
+   
+  </table>
+</p>
 
 ---
 
-### ❤️ Interactive Actions
+## ✨ Key Features
 
-The post UI is not only static. It includes real local UI state:
+### 🎨 Premium Material UI Concept
 
-| Action  | Behavior                                  |
-| ------- | ----------------------------------------- |
-| Like    | Toggles heart icon and updates like count |
-| Save    | Toggles bookmark icon                     |
-| Follow  | Switches between Follow and Following     |
-| Menu    | Ready for post options                    |
-| Comment | Ready for comment screen integration      |
-| Share   | Ready for share sheet integration         |
+The UI is designed with a clean, premium, and modern creator-feed experience:
+
+- Soft app background
+- Floating white surface cards
+- Large cinematic post previews
+- Rounded material-style containers
+- Deep but subtle card shadows
+- Premium typography hierarchy
+- Polished icon buttons
+- Creator-focused visual layout
+- Beautiful dark spotlight section
+
+---
+
+### 🌟 Spotlight Hero Panel
+
+A unique top hero section is added to make the feed feel more professional and engaging.
+
+It includes:
+
+- Today’s spotlight section
+- Dark premium gradient-style card
+- Creator discovery copy
+- Floating decorative orbs
+- Feed engagement stats
+- Sparkle icon bubble
+
+---
+
+### 🧭 Category Filter Rail
+
+The feed now includes material filter chips for content discovery.
+
+| Filter | Purpose |
+|---|---|
+| For You | Shows all posts |
+| Nature | Shows nature content |
+| Travel | Shows travel content |
+| Design | Shows creative/design content |
+
+Each filter chip includes an Ionicon, active state, and clean material styling.
+
+---
+
+### 🟣 Advanced Story Section
+
+The story row now feels more like a premium creator app.
+
+| Feature | Description |
+|---|---|
+| Add Story | Adds a plus badge for the current user |
+| Live Story | Shows a live badge with live dot |
+| Seen Story | Uses muted calm styling |
+| Story Ring Moods | Supports hot, fresh, and calm ring states |
+| Watch All Button | Adds a polished story action button |
+| Optimized List | Uses horizontal `FlatList` with `getItemLayout` |
+
+---
+
+### 🖼️ Cinematic Post Cards
+
+Each post card has been upgraded with a premium presentation.
+
+Includes:
+
+- Creator avatar frame
+- Username and verified badge
+- Location row with icon
+- Follow / Following state
+- Featured ribbon
+- Large responsive image
+- Image mood badge
+- Category badge
+- Image shade overlay
+- Like, comment, share, save actions
+- Shares and saves metrics
+- Expandable caption
+- Timestamp and comments preview
+
+---
+
+### ❤️ Real Interactive Actions
+
+The UI includes local state-based interactivity.
+
+| Action | Behavior |
+|---|---|
+| Like | Toggles heart icon and updates like count |
+| Double Tap | Triggers heart burst animation |
+| Save | Toggles bookmark state |
+| Follow | Switches between Follow and Following |
+| Read More | Expands long captions |
+| Filter | Filters feed by post category |
+| Menu | Ready for post action sheet integration |
+| Comment | Ready for comments screen integration |
+| Share | Ready for share sheet integration |
+
+---
+
+### 💥 Double-Tap Like Animation
+
+Posts support a premium double-tap interaction:
+
+- Double-tap image to like
+- Heart burst animation appears over the image
+- Like state updates automatically
+- Smooth `Animated.spring` and fade-out animation
+
+---
+
+### 🛡️ Modern Safe Area Handling
+
+The app avoids deprecated core `SafeAreaView` and uses the recommended safe-area package.
+
+```tsx
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+```
+
+The root layout is wrapped with:
+
+```tsx
+<SafeAreaProvider>
+  <SafeAreaView edges={['top']} style={styles.safeArea}>
+    {/* App Content */}
+  </SafeAreaView>
+</SafeAreaProvider>
+```
 
 ---
 
 ### ⚡ Performance Optimized
 
-The feed is built with performance in mind:
+The feed is optimized for smooth rendering:
 
-* `FlatList` instead of nested `ScrollView`
-* Stable keys using post IDs
-* Memoized components
-* `useCallback` for render functions
-* `useMemo` for like-count calculation
-* `initialNumToRender`, `maxToRenderPerBatch`, and `windowSize` configured
-* `removeClippedSubviews` enabled for better list performance
+- `FlatList` instead of nested `ScrollView`
+- Stable item IDs
+- `React.memo` for reusable components
+- `useCallback` for render functions
+- `useMemo` for filtered posts and like count
+- `initialNumToRender` configured
+- `maxToRenderPerBatch` configured
+- `windowSize` configured
+- `removeClippedSubviews` enabled
+- Horizontal story list uses `getItemLayout`
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology              | Usage                       |
-| ----------------------- | --------------------------- |
-| React Native            | Mobile app framework        |
-| TypeScript              | Type-safe app structure     |
-| JavaScript              | Component logic and styling |
-| Ionicons                | Professional vector icons   |
-| React Native StyleSheet | Native styling              |
-| FlatList                | Optimized list rendering    |
+| Technology | Usage |
+|---|---|
+| React Native | Mobile app framework |
+| TypeScript | Type-safe app structure |
+| JavaScript | Component logic and styling |
+| Ionicons | Professional vector icons |
+| React Native Safe Area Context | Modern safe-area handling |
+| React Native Animated | Double-tap heart animation |
+| FlatList | Optimized feed and story rendering |
+| StyleSheet | Native styling system |
+
+---
+
+## 📦 Dependencies
+
+Install the required packages:
+
+```bash
+npm install @react-native-vector-icons/ionicons
+npm install react-native-safe-area-context
+```
+
+For iOS, run:
+
+```bash
+cd ios
+pod install
+cd ..
+```
 
 ---
 
@@ -146,9 +272,7 @@ instagramclone/
 │
 ├── assets/
 │   ├── icons/
-│   │   ├── instagram_logo_text.png
-│   │   ├── ic_activity_button.png
-│   │   └── ic_messaging_button.png
+│   │   └── instagram_logo_text.png
 │   │
 │   ├── images/
 │   │   ├── image5.jpg
@@ -189,17 +313,16 @@ npm install
 
 ---
 
-### 3. Install Ionicons
-
-This project uses Ionicons for clean professional icons.
+### 3. Install required UI packages
 
 ```bash
 npm install @react-native-vector-icons/ionicons
+npm install react-native-safe-area-context
 ```
 
 ---
 
-### 4. Run Metro
+### 4. Start Metro
 
 ```bash
 npx react-native start --reset-cache
@@ -219,7 +342,7 @@ npx react-native run-android
 
 ## ✅ Important Icon Setup
 
-This project uses the modern package-per-icon-set setup:
+This project uses the modern package-per-icon-set Ionicons setup:
 
 ```js
 import {Ionicons} from '@react-native-vector-icons/ionicons/static';
@@ -239,62 +362,79 @@ The modern Ionicons package does not need that old `fonts.gradle` script.
 
 ### `App.tsx`
 
-The root screen manages:
+Responsible for:
 
-* Stories data
-* Feed posts data
-* Main `FlatList`
-* Header composition
-* Toolbar
-* Feed rendering
+- App root layout
+- Modern safe-area provider
+- Feed data
+- Story data
+- Filter data
+- Category-based post filtering
+- Main `FlatList`
+- Toolbar
+- Spotlight hero panel
+- Filter rail
+- Feed header composition
 
 ---
 
 ### `CircleImageList.js`
 
-Responsible for the story section.
+Responsible for the premium story section.
 
-It supports:
+Supports:
 
-* Live badge
-* Add story badge
-* Seen story styling
-* Horizontal optimized list
-* Accessible story buttons
+- Add story badge
+- Live story badge with dot
+- Seen story styling
+- Hot, fresh, and calm story ring moods
+- Watch all action
+- Horizontal optimized story list
+- Accessible story buttons
 
 ---
 
 ### `PostView.js`
 
-Responsible for each post card.
+Responsible for each premium post card.
 
-It supports:
+Supports:
 
-* Like state
-* Save state
-* Follow state
-* Verified badge
-* Count formatting
-* Ionicons actions
-* Responsive image height
-* Premium post-card styling
+- Like state
+- Save state
+- Follow state
+- Read-more caption state
+- Double-tap-to-like animation
+- Verified badge
+- Featured ribbon
+- Mood badge
+- Category badge
+- Engagement metrics
+- Count formatting
+- Responsive image height
+- Material card styling
 
 ---
 
 ### `styles.js`
 
-Responsible for shared app-level styling:
+Responsible for shared app styling.
 
-* App background
-* Toolbar
-* Notification badge
-* Message badge
-* Feed spacing
-* Shared hit slop
+Includes:
+
+- App background
+- Toolbar styling
+- Hero panel styling
+- Filter chip styling
+- Badge styling
+- Shared shadows
+- Safe-area container
+- Feed spacing
+- Shared hit slop
 
 ---
 
-## 🧠 Data Model
+## 🧠 Data Models
 
 ### Story Item
 
@@ -306,6 +446,7 @@ type StoryItem = {
   seen?: boolean;
   isLive?: boolean;
   isAdd?: boolean;
+  ring?: 'hot' | 'fresh' | 'calm';
 };
 ```
 
@@ -325,8 +466,25 @@ type FeedPost = {
   userPostImage: ImageSourcePropType;
   likes: number;
   comments: number;
+  shares?: number;
+  saves?: number;
   caption: string;
   timeAgo: string;
+  category: 'Nature' | 'Travel' | 'Design';
+  mood: string;
+  featured?: boolean;
+};
+```
+
+---
+
+### Filter Item
+
+```ts
+type FilterItem = {
+  id: 'All' | 'Nature' | 'Travel' | 'Design';
+  label: string;
+  icon: keyof typeof Ionicons.glyphMap;
 };
 ```
 
@@ -334,19 +492,24 @@ type FeedPost = {
 
 ## 🎯 Customization Guide
 
-### Change brand color
-
-In `PostView.js`:
-
-```js
-instagram: '#E1306C',
-```
+### Change brand colors
 
 In `styles.js`:
 
 ```js
 brand: '#E1306C',
 accent: '#F77737',
+violet: '#7C3AED',
+blue: '#2563EB',
+```
+
+In `PostView.js`:
+
+```js
+instagram: '#E1306C',
+blue: '#2563EB',
+orange: '#F77737',
+green: '#10B981',
 ```
 
 ---
@@ -361,6 +524,7 @@ In `App.tsx`:
   image: require('./assets/images/image5.jpg'),
   text: 'new_user',
   isLive: true,
+  ring: 'fresh',
 }
 ```
 
@@ -377,13 +541,34 @@ In `App.tsx`:
   fullName: 'Travel Frames',
   location: 'Himalayas, India',
   verified: true,
+  featured: true,
+  category: 'Travel',
+  mood: 'Golden hour',
   userAvatar: require('./assets/images/lovethenature95.jpg'),
   userPostImage: require('./assets/post/post01.jpg'),
   likes: 23000,
   comments: 420,
+  shares: 98,
+  saves: 1800,
   caption: 'A peaceful frame from the mountains.',
   timeAgo: '10 minutes ago',
 }
+```
+
+---
+
+### Add a new filter
+
+Update the `FilterItem` type and `filters` array in `App.tsx`.
+
+```ts
+{id: 'Design', label: 'Design', icon: 'color-palette-outline'}
+```
+
+Then assign the same category to posts:
+
+```ts
+category: 'Design'
 ```
 
 ---
@@ -392,7 +577,7 @@ In `App.tsx`:
 
 ### Icons showing as square boxes
 
-Use the modern Ionicons package:
+Install the modern Ionicons package:
 
 ```bash
 npm install @react-native-vector-icons/ionicons
@@ -404,13 +589,13 @@ Use this import:
 import {Ionicons} from '@react-native-vector-icons/ionicons/static';
 ```
 
-Remove this old Gradle line if you added it:
+Remove this old Gradle line if it exists:
 
 ```gradle
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 
-Then clean and rebuild:
+Clean and rebuild:
 
 ```bash
 cd android
@@ -419,6 +604,24 @@ cd ..
 npx react-native start --reset-cache
 npx react-native run-android
 ```
+
+---
+
+### SafeAreaView deprecated warning
+
+Use:
+
+```bash
+npm install react-native-safe-area-context
+```
+
+Then import:
+
+```tsx
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+```
+
+Do not import `SafeAreaView` from `react-native`.
 
 ---
 
@@ -443,43 +646,41 @@ npx react-native run-android
 
 ## 🏆 Why This Project Looks Professional
 
-This UI avoids a basic clone-style structure and follows better frontend practices:
+This project avoids a basic clone-style UI and follows a more polished mobile product approach.
 
-* Data-driven rendering
-* Component-based architecture
-* Reusable UI states
-* Clean visual spacing
-* Production-style card layout
-* Optimized list performance
-* Accessible buttons
-* Proper vector icons
-* Scalable data models
-* Easy customization
+It includes:
 
----
-
-## 📸 Screenshot
-
-<div align="center">
-
-<img src="screenshots/home-feed-preview.png" alt="Instagram Clone React Native App Preview" width="360" />
-
-</div>
+- Premium material design language
+- Strong visual hierarchy
+- Scalable component structure
+- Data-driven rendering
+- Optimized list performance
+- Modern safe-area handling
+- Proper vector icons
+- Local UI interaction states
+- Double-tap like animation
+- Creator-focused hero section
+- Discoverable category filters
+- Clean readable documentation
 
 ---
 
 ## 🔮 Future Improvements
 
-* Add dark mode
-* Add comments screen
-* Add profile screen
-* Add double-tap-to-like animation
-* Add image carousel posts
-* Add reels tab
-* Add bottom navigation
-* Add Firebase backend
-* Add authentication
-* Add upload post feature
+- Add dark mode
+- Add bottom navigation
+- Add comments screen
+- Add user profile screen
+- Add post upload screen
+- Add image carousel posts
+- Add reels screen
+- Add search screen
+- Add pull-to-refresh
+- Add skeleton loading states
+- Add Firebase authentication
+- Add Firebase backend feed
+- Add persistent like/save state
+- Add real share sheet integration
 
 ---
 
@@ -489,12 +690,12 @@ Contributions are welcome.
 
 You can contribute by:
 
-* Improving UI animations
-* Adding new screens
-* Optimizing performance
-* Fixing bugs
-* Improving documentation
-* Adding backend integration
+- Improving UI animations
+- Adding new screens
+- Optimizing performance
+- Fixing bugs
+- Improving documentation
+- Adding backend integration
 
 ---
 
