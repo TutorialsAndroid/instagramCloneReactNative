@@ -1,64 +1,186 @@
-/* eslint-disable prettier/prettier */
-import React from 'react';
-import {View, Image, FlatList, Text, StyleSheet} from 'react-native';
+import React, {memo, useCallback} from 'react';
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 
-const CircleImageList = ({data}) => {
-  const renderCircleImage = ({item}) => (
-    <View style={styles.container}>
-        <View style={styles.circleImageContainer}>
-          <Image source={item.image} style={styles.circleImage} />
+const ITEM_WIDTH = 84;
+
+const CircleImageList = memo(({data = []}) => {
+  const renderCircleImage = useCallback(({item}) => {
+    return (
+      <TouchableOpacity
+        activeOpacity={0.82}
+        style={styles.storyItem}
+        accessibilityRole="button"
+        accessibilityLabel={`Open ${item.text} story`}>
+        <View style={[styles.storyRing, item.seen && styles.seenStoryRing]}>
+          <View style={styles.avatarShell}>
+            <Image
+              source={item.image}
+              style={styles.circleImage}
+              accessibilityIgnoresInvertColors
+            />
+          </View>
+
+          {item.isLive ? (
+            <View style={styles.liveBadge}>
+              <Text style={styles.liveText}>LIVE</Text>
+            </View>
+          ) : null}
+
+          {item.isAdd ? (
+            <View style={styles.addBadge}>
+              <Text style={styles.addText}>+</Text>
+            </View>
+          ) : null}
         </View>
-        <Text style={styles.imageText}>{item.text}</Text>
-    </View>
-  );
+
+        <Text
+          numberOfLines={1}
+          style={[styles.imageText, item.seen && styles.seenText]}>
+          {item.text}
+        </Text>
+      </TouchableOpacity>
+    );
+  }, []);
 
   return (
-    <View >
+    <View style={styles.wrapper}>
+      <View style={styles.headerRow}>
+        <Text style={styles.title}>Stories</Text>
+        <Text style={styles.subtitle}>Fresh updates</Text>
+      </View>
+
       <FlatList
         data={data}
         renderItem={renderCircleImage}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(item, index) => item.id || `${item.text}-${index}`}
         horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.listContent}
+        getItemLayout={(_, index) => ({
+          length: ITEM_WIDTH,
+          offset: ITEM_WIDTH * index,
+          index,
+        })}
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
+  wrapper: {
+    backgroundColor: '#FFFFFF',
+    paddingTop: 14,
+    paddingBottom: 12,
   },
-  circleImageContainer: {
-    width: 65,
-    height: 65,
-    borderRadius: 250,
-    overflow: 'hidden',
-    marginHorizontal: 5,
-    borderColor: '#AA336A',
-    borderWidth: 4,
+  headerRow: {
+    paddingHorizontal: 16,
+    marginBottom: 12,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  title: {
+    color: '#111827',
+    fontSize: 17,
+    fontWeight: '800',
+    letterSpacing: -0.2,
+  },
+  subtitle: {
+    color: '#9CA3AF',
+    fontSize: 12,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+  },
+  listContent: {
+    paddingHorizontal: 12,
+  },
+  storyItem: {
+    width: ITEM_WIDTH,
+    alignItems: 'center',
+  },
+  storyRing: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    padding: 3,
+    backgroundColor: '#E1306C',
+    borderWidth: 2,
+    borderColor: '#F77737',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  seenStoryRing: {
+    backgroundColor: '#D1D5DB',
+    borderColor: '#E5E7EB',
+  },
+  avatarShell: {
+    width: 62,
+    height: 62,
+    borderRadius: 31,
+    backgroundColor: '#FFFFFF',
+    padding: 3,
   },
   circleImage: {
     width: '100%',
     height: '100%',
+    borderRadius: 28,
     resizeMode: 'cover',
   },
-  gradientContainer: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    overflow: 'hidden',
-    marginHorizontal: 5,
-    justifyContent: 'center',
+  liveBadge: {
+    position: 'absolute',
+    bottom: -3,
+    paddingHorizontal: 7,
+    height: 20,
+    borderRadius: 10,
+    backgroundColor: '#E1306C',
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
     alignItems: 'center',
+    justifyContent: 'center',
+  },
+  liveText: {
+    color: '#FFFFFF',
+    fontSize: 9,
+    fontWeight: '900',
+    letterSpacing: 0.3,
+  },
+  addBadge: {
+    position: 'absolute',
+    right: 1,
+    bottom: 1,
+    width: 23,
+    height: 23,
+    borderRadius: 12,
+    backgroundColor: '#2563EB',
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  addText: {
+    color: '#FFFFFF',
+    fontSize: 17,
+    lineHeight: 19,
+    fontWeight: '800',
   },
   imageText: {
-    width: 65,
-    fontSize: 10,
-    marginTop: 5,
-    marginStart: 6,
+    width: 76,
+    color: '#111827',
+    fontSize: 11.5,
+    fontWeight: '600',
+    marginTop: 8,
     textAlign: 'center',
-    color: 'black', // You can set the desired color for the text
+  },
+  seenText: {
+    color: '#6B7280',
   },
 });
 
