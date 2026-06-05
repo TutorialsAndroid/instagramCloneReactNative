@@ -1,0 +1,133 @@
+export const stories = [
+  {id: 'your-story', image: require('../assets/images/image8.jpg'), text: 'Your story', isAdd: true, ring: 'fresh'},
+  {id: 'sonalii', image: require('../assets/images/image5.jpg'), text: 'itss_sonalii', isLive: true, ring: 'hot'},
+  {id: 'rohit', image: require('../assets/images/image6.jpg'), text: 'rohit30619', ring: 'fresh'},
+  {id: 'android', image: require('../assets/images/image7.jpg'), text: 'android', seen: true, ring: 'calm'},
+  {id: 'marvel', image: require('../assets/images/image8.jpg'), text: 'marvelstudios', ring: 'hot'},
+  {id: 'google', image: require('../assets/images/image9.jpg'), text: 'google', seen: true, ring: 'calm'},
+  {id: 'off-track', image: require('../assets/images/image10.jpg'), text: '_off_track___', ring: 'fresh'},
+];
+
+export const posts = [
+  {
+    id: 'post-nature-01',
+    username: 'lovethenature95',
+    fullName: 'Love The Nature',
+    location: 'Western Ghats, India',
+    verified: true,
+    featured: true,
+    category: 'Nature',
+    mood: 'Calm view',
+    userAvatar: require('../assets/images/lovethenature95.jpg'),
+    userPostImage: require('../assets/post/post01.jpg'),
+    likes: 12894,
+    comments: 347,
+    shares: 86,
+    saves: 1400,
+    caption: 'A quiet frame from the mountains. Clean air, soft light, and a reminder to slow down.',
+    timeAgo: '18 minutes ago',
+  },
+  {
+    id: 'post-nature-02',
+    username: 'nature_beauty511',
+    fullName: 'Nature Beauty',
+    location: 'Morning trails',
+    category: 'Travel',
+    mood: 'Golden hour',
+    userAvatar: require('../assets/images/nature_beauty511.jpg'),
+    userPostImage: require('../assets/post/post02.jpg'),
+    likes: 8540,
+    comments: 129,
+    shares: 44,
+    saves: 920,
+    caption: 'Some views do not need filters. They just need a little patience and the right moment.',
+    timeAgo: '1 hour ago',
+  },
+  {
+    id: 'post-design-03',
+    username: 'travel.frames',
+    fullName: 'Travel Frames',
+    location: 'Creative outdoors',
+    verified: true,
+    category: 'Design',
+    mood: 'Creator pick',
+    userAvatar: require('../assets/images/image5.jpg'),
+    userPostImage: require('../assets/post/post01.jpg'),
+    likes: 17620,
+    comments: 512,
+    shares: 132,
+    saves: 2100,
+    caption: 'Composition, depth, and light can turn a simple moment into a cinematic story.',
+    timeAgo: '2 hours ago',
+  },
+];
+
+export const exploreItems = [
+  {id: 'ex-1', title: 'Alpine silence', tag: 'Nature', image: require('../assets/post/post01.jpg'), tall: true, score: '98%'},
+  {id: 'ex-2', title: 'Creator desk', tag: 'Design', image: require('../assets/images/image5.jpg'), score: '92%'},
+  {id: 'ex-3', title: 'Morning trails', tag: 'Travel', image: require('../assets/post/post02.jpg'), tall: false, score: '89%'},
+  {id: 'ex-4', title: 'Soft light', tag: 'Nature', image: require('../assets/images/image6.jpg'), score: '95%'},
+  {id: 'ex-5', title: 'Urban palette', tag: 'Design', image: require('../assets/images/image7.jpg'), tall: true, score: '91%'},
+  {id: 'ex-6', title: 'Weekend route', tag: 'Travel', image: require('../assets/images/image8.jpg'), score: '87%'},
+  {id: 'ex-7', title: 'Deep focus', tag: 'Design', image: require('../assets/images/image9.jpg'), score: '94%'},
+  {id: 'ex-8', title: 'Open air', tag: 'Nature', image: require('../assets/images/image10.jpg'), tall: true, score: '96%'},
+];
+
+export const reels = [
+  {
+    id: 'reel-1',
+    title: 'Snow valley transition',
+    creator: 'lovethenature95',
+    audio: 'Original Audio • cinematic wind',
+    image: require('../assets/post/post01.jpg'),
+    likes: 48200,
+    comments: 920,
+    saves: 6400,
+  },
+  {
+    id: 'reel-2',
+    title: 'Golden trail cut',
+    creator: 'nature_beauty511',
+    audio: 'Travel Mix • morning energy',
+    image: require('../assets/post/post02.jpg'),
+    likes: 31500,
+    comments: 611,
+    saves: 3800,
+  },
+  {
+    id: 'reel-3',
+    title: 'Creator color flow',
+    creator: 'travel.frames',
+    audio: 'Design Beat • clean edit',
+    image: require('../assets/images/image5.jpg'),
+    likes: 28400,
+    comments: 488,
+    saves: 5100,
+  },
+];
+
+export const chats = [
+  {id: 'chat-1', name: 'Love The Nature', username: 'lovethenature95', avatar: require('../assets/images/lovethenature95.jpg'), lastMessage: 'That mountain edit is ready for review.', time: '2m', unread: 3, online: true, priority: 'Collab'},
+  {id: 'chat-2', name: 'Nature Beauty', username: 'nature_beauty511', avatar: require('../assets/images/nature_beauty511.jpg'), lastMessage: 'Sending raw shots in a while.', time: '16m', unread: 0, online: true, priority: 'Creator'},
+  {id: 'chat-3', name: 'Travel Frames', username: 'travel.frames', avatar: require('../assets/images/image5.jpg'), lastMessage: 'Can we schedule the reel drop tonight?', time: '1h', unread: 1, online: false, priority: 'Brand'},
+  {id: 'chat-4', name: 'Android Studio', username: 'android', avatar: require('../assets/images/image7.jpg'), lastMessage: 'UI build is looking premium now.', time: '3h', unread: 0, online: false, priority: 'Dev'},
+];
+
+export const profile = {
+  name: 'Creator Studio',
+  username: 'creator.feed',
+  bio: 'Building a premium visual network for creators, travelers, designers, and storytellers.',
+  avatar: require('../assets/images/image8.jpg'),
+  cover: require('../assets/post/post01.jpg'),
+  stats: [
+    {id: 'posts', value: '128', label: 'Posts'},
+    {id: 'followers', value: '42.8K', label: 'Followers'},
+    {id: 'reach', value: '1.2M', label: 'Reach'},
+  ],
+  highlights: [
+    {id: 'h1', label: 'Trips', icon: 'airplane-outline'},
+    {id: 'h2', label: 'Nature', icon: 'leaf-outline'},
+    {id: 'h3', label: 'Studio', icon: 'color-palette-outline'},
+    {id: 'h4', label: 'Collabs', icon: 'people-outline'},
+  ],
+};

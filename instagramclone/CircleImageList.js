@@ -1,55 +1,30 @@
 import React, {memo, useCallback} from 'react';
-import {
-  FlatList,
-  Image,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {FlatList, Image, Platform, Pressable, StyleSheet, Text, View} from 'react-native';
 import {Ionicons} from '@react-native-vector-icons/ionicons/static';
+import {colors, softShadow} from './theme';
 
 const ITEM_WIDTH = 90;
 
 const ringStyles = {
-  hot: {
-    backgroundColor: '#E1306C',
-    borderColor: '#F77737',
-  },
-  fresh: {
-    backgroundColor: '#7C3AED',
-    borderColor: '#06B6D4',
-  },
-  calm: {
-    backgroundColor: '#D1D5DB',
-    borderColor: '#E5E7EB',
-  },
+  hot: {backgroundColor: colors.brand, borderColor: colors.orange},
+  fresh: {backgroundColor: colors.violet, borderColor: colors.cyan},
+  calm: {backgroundColor: '#D1D5DB', borderColor: colors.line},
 };
 
 const CircleImageList = memo(({data = []}) => {
   const renderCircleImage = useCallback(({item}) => {
-    const ring = item.seen
-      ? ringStyles.calm
-      : ringStyles[item.ring || 'hot'] || ringStyles.hot;
+    const ring = item.seen ? ringStyles.calm : ringStyles[item.ring || 'hot'];
 
     return (
       <Pressable
         android_ripple={{color: 'rgba(17, 24, 39, 0.08)', borderless: true}}
-        style={({pressed}) => [
-          styles.storyItem,
-          pressed && styles.storyItemPressed,
-        ]}
+        style={({pressed}) => [styles.storyItem, pressed && styles.storyItemPressed]}
         accessibilityRole="button"
         accessibilityLabel={`Open ${item.text} story`}>
         <View style={[styles.storyHalo, !item.seen && styles.storyHaloActive]}>
           <View style={[styles.storyRing, ring]}>
             <View style={styles.avatarShell}>
-              <Image
-                source={item.image}
-                style={styles.circleImage}
-                accessibilityIgnoresInvertColors
-              />
+              <Image source={item.image} style={styles.circleImage} accessibilityIgnoresInvertColors />
             </View>
 
             {item.isLive ? (
@@ -67,9 +42,7 @@ const CircleImageList = memo(({data = []}) => {
           </View>
         </View>
 
-        <Text
-          numberOfLines={1}
-          style={[styles.imageText, item.seen && styles.seenText]}>
+        <Text numberOfLines={1} style={[styles.imageText, item.seen && styles.seenText]}>
           {item.text}
         </Text>
       </Pressable>
@@ -81,12 +54,12 @@ const CircleImageList = memo(({data = []}) => {
       <View style={styles.headerRow}>
         <View>
           <Text style={styles.title}>Stories</Text>
-          <Text style={styles.headerHint}>Live moments from creators</Text>
+          <Text style={styles.headerHint}>Live creator moments</Text>
         </View>
 
         <Pressable style={styles.watchAllButton} accessibilityRole="button">
           <Text style={styles.watchAllText}>Watch all</Text>
-          <Ionicons name="chevron-forward" size={14} color="#E1306C" />
+          <Ionicons name="chevron-forward" size={14} color={colors.brand} />
         </Pressable>
       </View>
 
@@ -97,37 +70,19 @@ const CircleImageList = memo(({data = []}) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.listContent}
-        getItemLayout={(_, index) => ({
-          length: ITEM_WIDTH,
-          offset: ITEM_WIDTH * index,
-          index,
-        })}
+        getItemLayout={(_, index) => ({length: ITEM_WIDTH, offset: ITEM_WIDTH * index, index})}
       />
     </View>
   );
 });
 
-const shadow = Platform.select({
-  ios: {
-    shadowColor: '#111827',
-    shadowOffset: {width: 0, height: 8},
-    shadowOpacity: 0.08,
-    shadowRadius: 16,
-  },
-  android: {
-    elevation: 3,
-  },
-  default: {},
-});
-
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: '#FFFFFF',
-    marginHorizontal: 14,
+    backgroundColor: colors.surface,
     borderRadius: 28,
     paddingTop: 16,
     paddingBottom: 15,
-    ...shadow,
+    ...softShadow,
   },
   headerRow: {
     paddingHorizontal: 16,
@@ -137,13 +92,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    color: '#111827',
+    color: colors.text,
     fontSize: 18,
     fontWeight: '900',
     letterSpacing: -0.35,
   },
   headerHint: {
-    color: '#9CA3AF',
+    color: colors.subtle,
     fontSize: 12,
     fontWeight: '700',
     marginTop: 3,
@@ -157,7 +112,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   watchAllText: {
-    color: '#E1306C',
+    color: colors.brand,
     fontSize: 12,
     fontWeight: '900',
     marginRight: 2,
@@ -196,7 +151,7 @@ const styles = StyleSheet.create({
     width: 62,
     height: 62,
     borderRadius: 31,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: colors.surface,
     padding: 3,
   },
   circleImage: {
@@ -211,9 +166,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 7,
     height: 21,
     borderRadius: 11,
-    backgroundColor: '#111827',
+    backgroundColor: colors.text,
     borderWidth: 2,
-    borderColor: '#FFFFFF',
+    borderColor: colors.surface,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
@@ -226,7 +181,7 @@ const styles = StyleSheet.create({
     marginRight: 4,
   },
   liveText: {
-    color: '#FFFFFF',
+    color: colors.surface,
     fontSize: 9,
     fontWeight: '900',
     letterSpacing: 0.35,
@@ -238,22 +193,22 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: '#2563EB',
+    backgroundColor: colors.blue,
     borderWidth: 2,
-    borderColor: '#FFFFFF',
+    borderColor: colors.surface,
     alignItems: 'center',
     justifyContent: 'center',
   },
   imageText: {
     width: 82,
-    color: '#111827',
+    color: colors.text,
     fontSize: 11.5,
     fontWeight: '700',
     marginTop: 8,
     textAlign: 'center',
   },
   seenText: {
-    color: '#6B7280',
+    color: colors.muted,
   },
 });
 
